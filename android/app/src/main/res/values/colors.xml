@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_navy">#0A2540</color>
+    <color name="primary_navy_dark">#06182B</color>
+    <color name="accent_sage">#2E7D5B</color>
+    <color name="background_ivory">#F8F9FA</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="text_charcoal">#1A1D20</color>
+    <color name="text_muted">#6C757D</color>
+</resources>
