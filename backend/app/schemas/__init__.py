@@ -1,0 +1,73 @@
+from app.schemas.auth import (
+    StudentRegisterRequest,
+    LoginRequest,
+    TokenResponse,
+    RefreshTokenRequest,
+    UserProfileResponse,
+    StudentProfileData,
+    LibrarianProfileData,
+    MessageResponse
+)
+from app.schemas.book import (
+    CategoryResponse,
+    CategoryCreate,
+    BookCopyResponse,
+    BookCopyCreate,
+    BookResponse,
+    BookCreateRequest,
+    BookUpdateRequest,
+    BookListResponse
+)
+from app.schemas.loan import (
+    BookLoanResponse,
+    LoanRequestCreate,
+    LoanIssueRequest,
+    LoanReturnRequest,
+    LoanRenewalResponse,
+    FineRecordResponse,
+    FinePaymentRequest,
+    FinePaymentResponse
+)
+from app.schemas.seat import (
+    OccupancyMetricsResponse,
+    StudySeatResponse,
+    StudyAreaResponse,
+    LibraryFloorResponse,
+    SeatReserveRequest,
+    SeatReservationResponse,
+    SeatBlockRequest
+)
+
+__all__ = [
+    "StudentRegisterRequest",
+    "LoginRequest",
+    "TokenResponse",
+    "RefreshTokenRequest",
+    "UserProfileResponse",
+    "StudentProfileData",
+    "LibrarianProfileData",
+    "MessageResponse",
+    "CategoryResponse",
+    "CategoryCreate",
+    "BookCopyResponse",
+    "BookCopyCreate",
+    "BookResponse",
+    "BookCreateRequest",
+    "BookUpdateRequest",
+    "BookListResponse",
+    "BookLoanResponse",
+    "LoanRequestCreate",
+    "LoanIssueRequest",
+    "LoanReturnRequest",
+    "LoanRenewalResponse",
+    "FineRecordResponse",
+    "FinePaymentRequest",
+    "FinePaymentResponse",
+    "OccupancyMetricsResponse",
+    "StudySeatResponse",
+    "StudyAreaResponse",
+    "LibraryFloorResponse",
+    "SeatReserveRequest",
+    "SeatReservationResponse",
+    "SeatBlockRequest"
+]

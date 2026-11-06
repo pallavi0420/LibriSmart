@@ -1,0 +1,29 @@
+# Android & Gradle
+.gradle/
+build/
+app/build/
+*.iml
+.idea/
+local.properties
+.cxx/
+*.apk
+*.aab
+
+# Python & FastAPI
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+*.db
+*.sqlite3
+.env
+
+# Windows & IDE
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+.DS_Store
+*.swp
+*~
