@@ -50,7 +50,7 @@ app.add_middleware(
 app.include_router(api_v1_router)
 
 
-@app.get("/", tags=["Root"])
+@app.api_route("/", methods=["GET", "HEAD"], tags=["Root"])
 async def root():
     return {
         "app": settings.APP_NAME,
@@ -60,7 +60,7 @@ async def root():
     }
 
 
-@app.get("/health", tags=["Health"])
+@app.api_route("/health", methods=["GET", "HEAD"], tags=["Health"])
 async def health_check():
     """
     Comprehensive health check verifying application and database connectivity.

@@ -18,7 +18,7 @@ object ApiClient {
      * - Local development (Android Emulator): "http://10.0.2.2:8000/"
      * - Production (Play Store): Replace with your live 24/7 cloud URL (e.g. "https://librismart.onrender.com/")
      */
-    private const val BASE_URL = "https://librismart-uajm.onrender.com/"
+    private const val BASE_URL = "https://librismart-api.onrender.com/"
 
     private val json = Json {
         ignoreUnknownKeys = true
