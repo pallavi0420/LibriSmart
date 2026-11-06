@@ -13,9 +13,19 @@ import app.models  # noqa: F401
 async def lifespan(app: FastAPI):
     """
     Application startup and shutdown events.
-    Synchronously creates missing tables on startup for rapid local testing and development.
+    Synchronously creates missing tables on startup, then seeds demo data
+    when running in production so Render reviewers have data to test with.
     """
     create_all_tables_sync()
+
+    if settings.ENVIRONMENT == "production":
+        try:
+            from seed_data import seed
+            seed()
+        except Exception as e:
+            # Non-fatal: log and continue startup even if seeding fails
+            print(f"[WARNING] Seed step failed (non-fatal): {e}", flush=True)
+
     yield
     await engine.dispose()
 

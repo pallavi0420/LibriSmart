@@ -1,5 +1,6 @@
 package com.librismart.app.presentation.auth
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -23,7 +24,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AdminPanelSettings
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.ErrorOutline
-import androidx.compose.material.icons.filled.LocalLibrary
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Visibility
@@ -53,13 +53,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import com.librismart.app.R
 import com.librismart.app.core.theme.AlertError
 import com.librismart.app.core.theme.NavyPrimary
 import com.librismart.app.core.theme.SageGreen
@@ -98,18 +101,18 @@ fun LoginScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            // Brand Logo Header
+            // Brand Logo Header — matches the launcher icon (navy circle + app icon)
             Box(
                 modifier = Modifier
                     .size(76.dp)
                     .background(color = NavyPrimary, shape = CircleShape),
                 contentAlignment = Alignment.Center
             ) {
-                Icon(
-                    imageVector = Icons.Default.LocalLibrary,
+                Image(
+                    painter = painterResource(id = R.drawable.ic_launcher_foreground),
                     contentDescription = "LibriSmart Logo",
-                    tint = MaterialTheme.colorScheme.surface,
-                    modifier = Modifier.size(42.dp)
+                    modifier = Modifier.size(56.dp),
+                    contentScale = ContentScale.Fit
                 )
             }
 
